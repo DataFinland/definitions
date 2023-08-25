@@ -1,7 +1,6 @@
-# Data Product Definitions template
+# Data Finland Definitions
 
-This repository contains a minimal set of resources that are necessary to get started
-with defining your own Data Product Definitions.
+This repository contains Data Product definitions for the Data Finland dataspace.
 
 # Repo structure
 
@@ -11,9 +10,6 @@ with defining your own Data Product Definitions.
   and converting definitions from sources
 
 # Getting started
-
-Press `Use this template` to create a new repo from this template and define your data
-products there.
 
 Please check the [Contribution guidelines](./CONTRIBUTING.md) to learn how to submit new
 data product definitions in this repo.
