@@ -1,16 +1,16 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "title": "Write Person Basic Information",
-    "description": "Create or update a minimal set of basic information of a person",
+    "title": "Person Basic Information",
+    "description": "A minimal set of basic information of a person",
     "version": "1.0.0"
   },
   "paths": {
-    "/Person/BasicInformation/Write_v1.0": {
+    "/Person/BasicInformation_v0.1": {
       "post": {
-        "summary": "Write Person Basic Information",
-        "description": "Create or update a minimal set of basic information of a person",
-        "operationId": "request_Person_BasicInformation_Write_v1_0",
+        "summary": "Person Basic Information",
+        "description": "A minimal set of basic information of a person",
+        "operationId": "request_Person_BasicInformation_v0_1",
         "parameters": [
           {
             "description": "Consent token",
@@ -50,7 +50,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/BasicInformationRequestResponse"
+                "$ref": "#/components/schemas/BasicInformationRequest"
               }
             }
           },
@@ -62,7 +62,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BasicInformationRequestResponse"
+                  "$ref": "#/components/schemas/BasicInformationResponse"
                 }
               }
             }
@@ -179,8 +179,13 @@
         "properties": {},
         "description": "This response is reserved by Product Gateway."
       },
-      "BasicInformationRequestResponse": {
-        "title": "BasicInformationRequestResponse",
+      "BasicInformationRequest": {
+        "title": "BasicInformationRequest",
+        "type": "object",
+        "properties": {}
+      },
+      "BasicInformationResponse": {
+        "title": "BasicInformationResponse",
         "required": ["email"],
         "type": "object",
         "properties": {

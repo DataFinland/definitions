@@ -6,11 +6,11 @@
     "version": "1.0.0"
   },
   "paths": {
-    "/Person/JobApplicantProfile/Write_v1.0": {
+    "/Person/JobApplicantProfile/Write_v0.1": {
       "post": {
         "summary": "Write Person Job Applicant Profile",
         "description": "Create or update a comprehensive set of skills, competences, occupations and work preferences of a person",
-        "operationId": "request_Person_JobApplicantProfile_Write_v1_0",
+        "operationId": "request_Person_JobApplicantProfile_Write_v0_1",
         "parameters": [
           {
             "description": "Consent token",

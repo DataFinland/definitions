@@ -6,11 +6,11 @@
     "version": "1.0.0"
   },
   "paths": {
-    "/Employment/EscoOccupations_v1.0": {
+    "/Employment/EscoOccupations_v0.1": {
       "post": {
         "summary": "Employment ESCO Occupations",
         "description": "Returns the list of standardized occupations based on the European Standard Classification of Occupations (ESCO) version 1.1.1",
-        "operationId": "request_Employment_EscoOccupations_v1_0",
+        "operationId": "request_Employment_EscoOccupations_v0_1",
         "parameters": [
           {
             "description": "Optional consent token",
