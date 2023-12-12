@@ -3,15 +3,14 @@
   "info": {
     "title": "Person Basic Information",
     "description": "A minimal set of basic information of a person",
-    "version": "0.1.0"
+    "version": "1.0.0"
   },
   "paths": {
-    "/Person/BasicInformation_v0.1": {
+    "/Person/BasicInformation_v1.0": {
       "post": {
         "summary": "Person Basic Information",
         "description": "A minimal set of basic information of a person",
-        "operationId": "request_Person_BasicInformation_v0_1",
-        "deprecated": true,
+        "operationId": "request_Person_BasicInformation_v1_0",
         "parameters": [
           {
             "name": "x-consent-token",

@@ -6,10 +6,6 @@ from definition_tooling.converter import CamelCaseModel, DataProductDefinition
 from pydantic import Field, HttpUrl
 
 
-class JobApplicantProfileRequest(CamelCaseModel):
-    pass
-
-
 class EscoCode(str, Enum):
     ESCO_2654_1_7 = "2654.1.7"
     ESCO_8121_4 = "8121.4"
@@ -4829,12 +4825,17 @@ class Occupation(CamelCaseModel):
         "(ESCO).",
         examples=[EscoCode.ESCO_2654_1_7],
     )
-    work_experience: Optional[int] = Field(
+    start_date: Optional[date] = Field(
         None,
-        title="Work experience in months",
-        description="The number of months that the person has experience in the "
-        "specific occupation.",
-        examples=[5],
+        title="Start Date",
+        description="The start date of the employment in the occupation",
+        examples=[date(year=2018, month=1, day=1)],
+    )
+    end_date: Optional[date] = Field(
+        None,
+        title="End Date",
+        description="The end date of the employment in the occupation",
+        examples=[date(year=2021, month=12, day=31)],
     )
     employer: Optional[str] = Field(
         None,
@@ -4872,6 +4873,12 @@ class Education(CamelCaseModel):
         "Classification of Education, [ISCED education codes]"
         "(https://koodistot.suomi.fi/codescheme;registryCode=jhs;schemeCode=isced_ala_1_20110101).",
         examples=[EducationField.ISCED_FIELD_0731],
+    )
+    start_date: Optional[date] = Field(
+        None,
+        title="Start Date",
+        description="The date on which the specific education has been started",
+        examples=[date(year=2015, month=9, day=1)],
     )
     graduation_date: Optional[date] = Field(
         None,
@@ -5006,7 +5013,7 @@ class WorkPreference(CamelCaseModel):
     )
 
 
-class JobApplicantProfileResponse(CamelCaseModel):
+class JobApplicantProfileRequest(CamelCaseModel):
     occupations: List[Occupation] = Field(
         ...,
         title="Occupations",
@@ -5051,12 +5058,15 @@ class JobApplicantProfileResponse(CamelCaseModel):
     )
 
 
+class JobApplicantProfileResponse(JobApplicantProfileRequest):
+    pass
+
+
 DEFINITION = DataProductDefinition(
-    version="0.1.0",
-    deprecated=True,
-    title="Person Job Applicant Profile",
-    description="A comprehensive set of skills, competences, occupations and work "
-    "preferences of a person",
+    version="2.0.0",
+    title="Write Person Job Applicant Profile",
+    description="Create or update a comprehensive set of skills, competences, "
+    "occupations and work preferences of a person",
     request=JobApplicantProfileRequest,
     response=JobApplicantProfileResponse,
     requires_authorization=True,

@@ -1,12 +1,9 @@
+from datetime import date
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 from definition_tooling.converter import CamelCaseModel, DataProductDefinition
 from pydantic import EmailStr, Field, constr
-
-
-class BasicInformationRequest(CamelCaseModel):
-    pass
 
 
 class ISO_3166_1_Alpha_3(str, Enum):
@@ -256,7 +253,7 @@ class ISO_3166_1_Alpha_3(str, Enum):
     ZWE = "ZWE"
 
 
-class BasicInformationResponse(CamelCaseModel):
+class BasicInformationRequestResponse(CamelCaseModel):
     given_name: Optional[str] = Field(
         None,
         title="Given name",
@@ -293,12 +290,11 @@ class BasicInformationResponse(CamelCaseModel):
 
 
 DEFINITION = DataProductDefinition(
-    version="0.1.0",
-    deprecated=True,
-    title="Person Basic Information",
-    description="A minimal set of basic information of a person",
-    request=BasicInformationRequest,
-    response=BasicInformationResponse,
+    version="1.0.0",
+    title="Write Person Basic Information",
+    description="Create or update a minimal set of basic information of a person",
+    request=BasicInformationRequestResponse,
+    response=BasicInformationRequestResponse,
     requires_authorization=True,
     requires_consent=True,
 )

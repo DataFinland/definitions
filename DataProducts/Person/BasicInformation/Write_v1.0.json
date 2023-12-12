@@ -1,17 +1,16 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Person Basic Information",
-    "description": "A minimal set of basic information of a person",
-    "version": "0.1.0"
+    "title": "Write Person Basic Information",
+    "description": "Create or update a minimal set of basic information of a person",
+    "version": "1.0.0"
   },
   "paths": {
-    "/Person/BasicInformation_v0.1": {
+    "/Person/BasicInformation/Write_v1.0": {
       "post": {
-        "summary": "Person Basic Information",
-        "description": "A minimal set of basic information of a person",
-        "operationId": "request_Person_BasicInformation_v0_1",
-        "deprecated": true,
+        "summary": "Write Person Basic Information",
+        "description": "Create or update a minimal set of basic information of a person",
+        "operationId": "request_Person_BasicInformation_Write_v1_0",
         "parameters": [
           {
             "name": "x-consent-token",
@@ -59,7 +58,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/BasicInformationRequest"
+                "$ref": "#/components/schemas/BasicInformationRequestResponse"
               }
             }
           }
@@ -70,7 +69,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BasicInformationResponse"
+                  "$ref": "#/components/schemas/BasicInformationRequestResponse"
                 }
               }
             }
@@ -191,12 +190,7 @@
         "title": "BadGateway",
         "description": "This response is reserved by Product Gateway."
       },
-      "BasicInformationRequest": {
-        "properties": {},
-        "type": "object",
-        "title": "BasicInformationRequest"
-      },
-      "BasicInformationResponse": {
+      "BasicInformationRequestResponse": {
         "properties": {
           "givenName": {
             "anyOf": [
@@ -263,7 +257,7 @@
         },
         "type": "object",
         "required": ["email"],
-        "title": "BasicInformationResponse"
+        "title": "BasicInformationRequestResponse"
       },
       "DataSourceError": {
         "properties": {

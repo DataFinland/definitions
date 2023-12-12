@@ -1,5 +1,6 @@
+from datetime import date
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 from definition_tooling.converter import CamelCaseModel, DataProductDefinition
 from pydantic import EmailStr, Field, constr
@@ -293,8 +294,7 @@ class BasicInformationResponse(CamelCaseModel):
 
 
 DEFINITION = DataProductDefinition(
-    version="0.1.0",
-    deprecated=True,
+    version="1.0.0",
     title="Person Basic Information",
     description="A minimal set of basic information of a person",
     request=BasicInformationRequest,
