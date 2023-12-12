@@ -11,6 +11,7 @@
         "summary": "Write Person Job Applicant Profile",
         "description": "Create or update a comprehensive set of skills, competences, occupations and work preferences of a person",
         "operationId": "request_Person_JobApplicantProfile_Write_v0_1",
+        "deprecated": true,
         "parameters": [
           {
             "name": "x-consent-token",

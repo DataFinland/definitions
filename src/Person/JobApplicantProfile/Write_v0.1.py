@@ -5053,6 +5053,7 @@ class JobApplicantProfileRequestRequest(JobApplicantProfileRequestResponse):
 
 DEFINITION = DataProductDefinition(
     version="0.1.0",
+    deprecated=True,
     title="Write Person Job Applicant Profile",
     description="Create or update a comprehensive set of skills, competences, "
     "occupations and work preferences of a person",

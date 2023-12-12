@@ -11,6 +11,7 @@
         "summary": "Employment ESCO Occupations",
         "description": "Returns the list of standardized occupations based on the European Standard Classification of Occupations (ESCO) version 1.1.1",
         "operationId": "request_Employment_EscoOccupations_v0_1",
+        "deprecated": true,
         "parameters": [
           {
             "name": "x-consent-token",

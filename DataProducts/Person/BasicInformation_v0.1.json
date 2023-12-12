@@ -11,6 +11,7 @@
         "summary": "Person Basic Information",
         "description": "A minimal set of basic information of a person",
         "operationId": "request_Person_BasicInformation_v0_1",
+        "deprecated": true,
         "parameters": [
           {
             "name": "x-consent-token",
