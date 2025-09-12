@@ -3,7 +3,7 @@
   "info": {
     "title": "Write Person Basic Information",
     "description": "Create or update a minimal set of basic information of a person",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "paths": {
     "/Person/BasicInformation/Write_v0.1": {
@@ -788,5 +788,6 @@
         "title": "ValidationError"
       }
     }
-  }
+  },
+  "x-strict-validation": false
 }

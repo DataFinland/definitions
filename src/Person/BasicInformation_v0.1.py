@@ -293,7 +293,8 @@ class BasicInformationResponse(CamelCaseModel):
 
 
 DEFINITION = DataProductDefinition(
-    version="0.1.0",
+    version="0.1.1",
+    strict_validation=False,
     deprecated=True,
     title="Person Basic Information",
     description="A minimal set of basic information of a person",
