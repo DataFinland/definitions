@@ -3085,7 +3085,8 @@ class EscoOccupationResponse(CamelCaseModel):
 
 
 DEFINITION = DataProductDefinition(
-    version="0.1.0",
+    version="0.1.1",
+    strict_validation=False,
     deprecated=True,
     title="Employment ESCO Occupations",
     description="Returns the list of standardized occupations based on the European Standard Classification of "
