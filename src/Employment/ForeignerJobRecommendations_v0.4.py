@@ -472,7 +472,7 @@ class ForeignerJobRecommendationsResponse(CamelCaseModel):
 
 
 DEFINITION = DataProductDefinition(
-    version="0.4.1",
+    version="0.4.2",
     strict_validation=False,
     title="Foreigner Job Recommendations",
     description="Returns the list of jobs recommended for the foreigner based on e.g. "
@@ -480,6 +480,4 @@ DEFINITION = DataProductDefinition(
     "Classification of Occupations (ESCO) version 1.1.1",
     request=ForeignerJobRecommendationsRequest,
     response=ForeignerJobRecommendationsResponse,
-    requires_authorization=False,
-    requires_consent=False,
 )

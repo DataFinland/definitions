@@ -5052,7 +5052,7 @@ class JobApplicantProfileRequestRequest(JobApplicantProfileRequestResponse):
 
 
 DEFINITION = DataProductDefinition(
-    version="0.1.1",
+    version="0.1.2",
     deprecated=True,
     strict_validation=False,
     title="Write Person Job Applicant Profile",
@@ -5060,6 +5060,4 @@ DEFINITION = DataProductDefinition(
     "occupations and work preferences of a person",
     request=JobApplicantProfileRequestRequest,
     response=JobApplicantProfileRequestResponse,
-    requires_authorization=True,
-    requires_consent=True,
 )

@@ -3,7 +3,7 @@
   "info": {
     "title": "Foreigner Job Recommendations",
     "description": "Returns the list of jobs recommended for the foreigner based on e.g. the citizenship area and previous occupations based on the European Standard Classification of Occupations (ESCO) version 1.1.1",
-    "version": "0.4.1"
+    "version": "0.4.2"
   },
   "paths": {
     "/Employment/ForeignerJobRecommendations_v0.4": {
@@ -12,48 +12,6 @@
         "description": "Returns the list of jobs recommended for the foreigner based on e.g. the citizenship area and previous occupations based on the European Standard Classification of Occupations (ESCO) version 1.1.1",
         "operationId": "request_Employment_ForeignerJobRecommendations_v0_4",
         "parameters": [
-          {
-            "name": "x-consent-token",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "description": "Optional consent token",
-              "default": "",
-              "title": "X-Consent-Token"
-            },
-            "description": "Optional consent token"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "description": "The login token. Value should be \"Bearer [token]\"",
-              "default": "",
-              "title": "Authorization"
-            },
-            "description": "The login token. Value should be \"Bearer [token]\""
-          },
-          {
-            "name": "x-authorization-provider",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "description": "The bare domain of the system that provided the token.",
-              "title": "X-Authorization-Provider"
-            },
-            "description": "The bare domain of the system that provided the token."
-          },
           {
             "name": "x-api-key",
             "in": "header",
