@@ -11,6 +11,7 @@
         "summary": "Write Person Basic Information",
         "description": "Create or update a minimal set of basic information of a person",
         "operationId": "request_Person_BasicInformation_Write_v2_0",
+        "deprecated": true,
         "parameters": [
           {
             "name": "x-api-key",
