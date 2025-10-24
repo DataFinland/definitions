@@ -293,13 +293,11 @@ class BasicInformationRequestRequest(BasicInformationRequestResponse):
 
 
 DEFINITION = DataProductDefinition(
-    version="0.1.1",
+    version="0.1.2",
     deprecated=True,
     strict_validation=False,
     title="Write Person Basic Information",
     description="Create or update a minimal set of basic information of a person",
     request=BasicInformationRequestRequest,
     response=BasicInformationRequestResponse,
-    requires_authorization=True,
-    requires_consent=True,
 )
